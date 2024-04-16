@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/socket.io-client@4.7.5/dist/socket.io.js"></script>
+  </head>
+  <body>
+    <main>
+      <!-- personal info start -->
+      <div class="personalInfoSection">
+        <form class="form-join">
+          <div class="nameAndAvatar">
+            <div class="avatar"></div>
+            <p id="name-area" style="font-size: larger; font-weight: bold"></p>
+          </div>
+
+          <input
+            id="name"
+            type="text"
+            placeholder="Enter your name"
+            required
+            maxlength="8"
+          />
+          <input
+            id="room"
+            type="text"
+            placeholder="Chat Room"
+            required
+            maxlength="8"
+          />
+          <button type="submit">join</button>
+        </form>
+        <div style="flex-direction: column; display: flex">
+          <button>settings</button>
+          <button>leave room</button>
+        </div>
+      </div>
+      <!-- personal info section end -->
+      <!-- all rooms info section start -->
+      <div class="allRooms">
+        <p>All rooms</p>
+        <ul class="room-list"></ul>
+        <p>People in room</p>
+        <ul class="user-list"></ul>
+      </div>
+
+      <!-- all rooms info section end -->
+
+      <div class="chatContainer">
+        <ul class="chat-display"></ul>
+        <form class="form-msg inputArea">
+          <input type="text" class="msgInput" placeholder="Your message" />
+          <button class="sendButton">Send</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
